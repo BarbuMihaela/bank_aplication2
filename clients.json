@@ -1,0 +1,25 @@
+
+{
+  "100": {
+    "name": "Vlad",
+    "telefon": "0754514529",
+    "oras": "Bucuresti"
+  },
+   "101": {
+    "name": "Bogdan",
+    "telefon": "074151642",
+    "oras": "Bucuresti"
+  },
+   "102": {
+    "name": "Alexandra",
+    "telefon": "075400642",
+    "oras": "Bucuresti"
+  },
+   "104": {
+    "name": "David",
+    "telefon": "0785220545",
+    "oras": "Bucuresti"
+  }
+
+
+}
