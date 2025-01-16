@@ -26,7 +26,7 @@ def remove_user(user_to_be_deleted: str, bank_path: str = "bank.json", auth_path
     with open(clients_path, "w") as f:
         f.write(json.dumps(clients, indent=4))
 
-
+# am scris code
 
 
 
