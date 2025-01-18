@@ -2,9 +2,9 @@ import os
 import json
 import time
 
-import pwinput
+# import pwinput
 
-import admin_operations
+import admin_operation
 from getpass import getpass
 
 USER_MENU = """
@@ -25,7 +25,14 @@ ADMIN_MENU = """
 4. Show users
 5. Exit
 """
-
+OKBLUE = '\033[94m'
+OKCYAN = '\033[96m'
+OKGREEN = '\033[92m'
+WARNING = '\033[93m'
+FAIL = '\033[91m'
+ENDC = '\033[0m'
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
 
 # ENVIRONMENT VARIABLE
 
@@ -104,7 +111,7 @@ def transfer_money(sender: str, receiver: str, amount: int, bank_path: str = "ba
 
         with open(bank_path, "w") as f:
             f.write(json.dumps(accounts, indent=4))
-        print(f"Ati transferat cu succes.Cont curent: {accounts[sender]['value']} {accounts[sender]['currency']}")
+        print(f"{OKBLUE}Ati transferat cu succes.Cont curent: {accounts[sender]['value']} {accounts[sender]['currency']}{ENDC}")
 
     else:
         print("Not enough money to send")
@@ -164,7 +171,7 @@ if __name__ == '__main__':
             match user_pick:
                 case "1":
                     user_to_delete = input("Ce user doresti sa stergi? ")
-                    admin_operations.remove_user(user_to_delete)
+                    admin_operation.remove_user(user_to_delete)
 
                 case "2":
                     pass
