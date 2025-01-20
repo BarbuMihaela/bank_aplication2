@@ -163,7 +163,7 @@ if __name__ == '__main__':
     while True:
         if username != "admin":
             match user_pick:
-                case "1":
+                case "1": #Afisarea Balantei
                     print(account_balance(username))
                 case "2":
                     amount = int(input("Citeste de la tastatura suma de bani in valuta personala: "))
@@ -171,9 +171,9 @@ if __name__ == '__main__':
                     receiver_id = get_username_by_phone(phone_number)
                     if receiver_id:
                         transfer_money(username, receiver_id, amount)
-
                 case "3":
-                    pass
+                    wmoney = int(input("Introduceti suma pe care o doriti retrasa: "))
+                    withdraw_money(username, wmoney )
                 case "4":
                     wmoney = int(input("Introduceti suma pe care o doriti adaugata: "))
                     add_money(username, wmoney)

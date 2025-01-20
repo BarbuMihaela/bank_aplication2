@@ -4,15 +4,13 @@ from locale import currency
 
 def remove_user(user_to_be_deleted: str, bank_path: str = "bank.json", auth_path: str = "auth.json" , clients_path: str = "clients.json"):
 
-    # here i  need to change to make this more efficient
-    with open(bank_path, "r") as f:
-        accounts = json.loads(f.read())
+    with open(bank_path, "r") as f1, \
+        open(auth_path, "r") as f2, \
+        open(clients_path, "r") as f3:
+        accounts = json.loads(f1.read())
+        credentials = json.loads(f2.read())
+        clients = json.loads(f3.read())
 
-    with open(auth_path, "r") as f:
-        credentials = json.loads(f.read())
-
-    with open(clients_path, "r") as f:
-        clients = json.loads(f.read())
 
     accounts.pop(user_to_be_deleted, None)
     credentials.pop(user_to_be_deleted, None)
