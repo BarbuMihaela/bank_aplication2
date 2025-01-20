@@ -200,8 +200,12 @@ if __name__ == '__main__':
                     admin_operation.remove_user(user_to_delete)
 
                 case "2":
-                    pass
-
+                    name = input("Numele noului user:")
+                    city = input("Orasul noului user: ")
+                    telephone = input("Numarul de telefon este: ")
+                    password = input("Parola este: ")
+                    value = int(input("Suma de bani: "))
+                    admin_operation.add_user(name, telephone, city, password, value)
 
                 case "3":
                     username = input("Citeste un nou user: ")
