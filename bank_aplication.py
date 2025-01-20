@@ -1,6 +1,7 @@
 import os
 import json
 import time
+from textwrap import indent
 
 # import pwinput
 
@@ -127,6 +128,30 @@ def get_username_by_phone(phone_number: str, clients_path: str = "clients.json")
     print(f"{OKBLUE}Phone number not recognised{ENDC}")
     return None
 
+def withdraw_money(user: str,wmoney: int, bank_path: str= "bank.json"):
+    with open(bank_path, "r")as f:
+        accounts = json.loads(f.read())
+
+    account = accounts[user]
+    if wmoney > account["value"]:
+        print(f"Fonduri insuficiente!")
+    else:
+        accounts[user]['value'] =  accounts[user]['value'] - wmoney
+        with open(bank_path, "w") as f:
+            f.write(json.dumps(accounts, indent= 4))
+        print("Tranzactia a fost facuta cu succes!")
+
+def add_money(user: str,wmoney: int, bank_path: str= "bank.json"):
+    with open(bank_path, "r")as f:
+        accounts = json.loads(f.read())
+
+    accounts[user]['value'] =  accounts[user]['value'] + wmoney
+    with open(bank_path, "w") as f:
+        f.write(json.dumps(accounts, indent= 4))
+    print("Tranzactia a fost facuta cu succes!")
+
+
+
 
 if __name__ == '__main__':
     username = input("Please enter your username: ")
@@ -150,7 +175,8 @@ if __name__ == '__main__':
                 case "3":
                     pass
                 case "4":
-                    pass
+                    wmoney = int(input("Introduceti suma pe care o doriti adaugata: "))
+                    add_money(username, wmoney)
                 case "5":
                     currency = input("Ce vrei sa transformi? ")
                     # verificati sa fie currency corect
@@ -175,6 +201,8 @@ if __name__ == '__main__':
 
                 case "2":
                     pass
+
+
                 case "3":
                     username = input("Citeste un nou user: ")
                     username = login(username)

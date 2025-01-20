@@ -1,4 +1,5 @@
 import json
+from locale import currency
 
 
 def remove_user(user_to_be_deleted: str, bank_path: str = "bank.json", auth_path: str = "auth.json" , clients_path: str = "clients.json"):
@@ -17,16 +18,12 @@ def remove_user(user_to_be_deleted: str, bank_path: str = "bank.json", auth_path
     credentials.pop(user_to_be_deleted, None)
     clients.pop(user_to_be_deleted, None)
 
-    with open(bank_path, "w") as f:
-        f.write(json.dumps(accounts, indent=4))
 
-    with open(auth_path, "w") as f:
-        f.write(json.dumps(credentials, indent=4))
-
-    with open(clients_path, "w") as f:
-        f.write(json.dumps(clients, indent=4))
-
+    with open(bank_path, "w") as accounts_file, \
+        open(auth_path, "w") as credentials_file, \
+        open(clients_path, "w") as clients_file:
+        accounts_file.write(json.dumps(accounts, indent=4))
+        credentials_file.write(json.dumps(credentials, indent=4))
+        clients_file.write(json.dumps(clients, indent=4))
 
 
-def add_user():
-    pass

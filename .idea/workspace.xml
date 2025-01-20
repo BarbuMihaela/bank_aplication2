@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d923a9a-1ce6-44ec-a035-50be7ae95009" name="Changes" comment="update admin_operation.py" />
+    <list default="true" id="5d923a9a-1ce6-44ec-a035-50be7ae95009" name="Changes" comment="update admin_operation.py">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin_operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.json" beforeDir="false" afterPath="$PROJECT_DIR$/auth.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank.json" beforeDir="false" afterPath="$PROJECT_DIR$/bank.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_aplication.py" beforeDir="false" afterPath="$PROJECT_DIR$/bank_aplication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients.json" beforeDir="false" afterPath="$PROJECT_DIR$/clients.json" afterDir="false" />
+    </list>
+    <list id="dc00a77a-6199-4734-9848-52ce9f6ce7a3" name="Changes by georg" comment="">
+      <change beforePath="$PROJECT_DIR$/admin_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin_operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_aplication.py" beforeDir="false" afterPath="$PROJECT_DIR$/bank_aplication.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +41,30 @@
     &quot;accountId&quot;: &quot;1ac0eeb5-ce08-47e7-b15e-a27c549bc793&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/admin_operation.py">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="2" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+        <range start1="5" end1="8" start2="6" end2="12" changelist="dc00a77a-6199-4734-9848-52ce9f6ce7a3" />
+        <range start1="9" end1="14" start2="13" end2="13" changelist="dc00a77a-6199-4734-9848-52ce9f6ce7a3" />
+        <range start1="19" end1="21" start2="18" end2="18" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+        <range start1="22" end1="24" start2="19" end2="25" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+        <range start1="25" end1="27" start2="26" end2="26" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+        <range start1="29" end1="32" start2="28" end2="28" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/bank_aplication.py">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+        <range start1="129" end1="129" start2="130" end2="154" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+        <range start1="140" end1="141" start2="165" end2="166" changelist="dc00a77a-6199-4734-9848-52ce9f6ce7a3" />
+        <range start1="148" end1="149" start2="173" end2="173" changelist="dc00a77a-6199-4734-9848-52ce9f6ce7a3" />
+        <range start1="150" end1="151" start2="174" end2="176" changelist="dc00a77a-6199-4734-9848-52ce9f6ce7a3" />
+        <range start1="152" end1="153" start2="177" end2="179" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+        <range start1="177" end1="177" start2="203" end2="205" changelist="5d923a9a-1ce6-44ec-a035-50be7ae95009" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -42,6 +77,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.bank_aplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/seeya/Desktop/itschool/bank_aplication2&quot;
   }
 }</component>
@@ -99,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737192006479</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update admin_operation.py">
+      <option name="closed" value="true" />
+      <created>1737392775711</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737392775711</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
