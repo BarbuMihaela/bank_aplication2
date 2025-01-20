@@ -41,7 +41,7 @@ UNDERLINE = '\033[4m'
 def login(user: str, auth_path: str = "auth.json") -> str:
     if user == "admin":
         for _ in range(3):
-            passwd = input("Type in password: ")
+            passwd = input(f"{OKCYAN}Type in password: {ENDC}")
             if passwd == os.environ['admin_bank']:
                 return user
         return ""
@@ -51,9 +51,9 @@ def login(user: str, auth_path: str = "auth.json") -> str:
 
         while user not in credentials:
             print("User not found in database.")
-            user = input("Type in user:")
+            user = input(f"{OKCYAN}Type in user:{ENDC}")
 
-            passwd = input("Citeste o parola: ")
+        passwd = input("Citeste o parola: ")
 
 
         while passwd != credentials[user]:
@@ -69,7 +69,7 @@ def account_balance(user: str, bank_path: str = "bank.json") -> str:
     value = accounts[user]["value"]
     currency = accounts[user]["currency"]
 
-    return f"Your account is worth : {value} {currency}"
+    return f"Your account is worth :{OKBLUE} {value} {currency}{ENDC}"
 
 
 def convert_account(user: str, to_currency: str, bank_path: str = "bank.json"):
@@ -114,7 +114,7 @@ def transfer_money(sender: str, receiver: str, amount: int, bank_path: str = "ba
         print(f"{OKBLUE}Ati transferat cu succes.Cont curent: {accounts[sender]['value']} {accounts[sender]['currency']}{ENDC}")
 
     else:
-        print("Not enough money to send")
+        print(f"{OKBLUE}Not enough money to send{ENDC}")
 
 
 def get_username_by_phone(phone_number: str, clients_path: str = "clients.json"):
@@ -124,7 +124,7 @@ def get_username_by_phone(phone_number: str, clients_path: str = "clients.json")
     for user_id, details in clients.items():
         if details['telefon'] == phone_number:
             return user_id
-    print("Phone number not recognised")
+    print(f"{OKBLUE}Phone number not recognised{ENDC}")
     return None
 
 
